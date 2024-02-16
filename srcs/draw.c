@@ -22,6 +22,7 @@ void	bresenham(t_fdf *fdf, t_point start, t_point end)
 
 	x_step = end.x - start.x;
 	y_step = end.y - start.y;
+	printf("x_step %i/n", x_step);
 	max_steps = (int)max(absolute(x_step), absolute(y_step));
 	x_step /= max_steps;
 	y_step /= max_steps;
