@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:02 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/15 19:08:48 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 15:45:56 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	bresenham(t_fdf *fdf, t_point start, t_point end)
 
 	x_step = end.x - start.x;
 	y_step = end.y - start.y;
-	printf("x_step %i/n", x_step);
 	max_steps = (int)max(absolute(x_step), absolute(y_step));
 	x_step /= max_steps;
 	y_step /= max_steps;
@@ -33,7 +32,8 @@ void	bresenham(t_fdf *fdf, t_point start, t_point end)
 	while (i_line < max_steps)
 	{
 		start.color = get_color(color, i_line++, max_steps);
-		if (start.x > 0 && start.y > 0 && start.x < WINDOW_WIDTH && start.y < WINDOW_HEIGHT)
+		if (start.x > 0 && start.y > 0 && start.x < WINDOW_WIDTH && \
+				start.y < WINDOW_HEIGHT)
 			pixel_to_image(fdf->image, start.x, start.y, start.color);
 		start.x += x_step;
 		start.y += y_step;
@@ -44,8 +44,8 @@ void	bresenham(t_fdf *fdf, t_point start, t_point end)
 void	pixel_to_image(t_image *image, float x, float y, int color)
 {
 	int	pixel;
+
 	pixel = ((int)y * image->line_bytes) + ((int)x * 4);
-	//printf("line_bytes %i\n", image->line_bytes);
 	if (image->endian == 1)
 	{
 		image->buffer[pixel + 0] = (color >> 24);

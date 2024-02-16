@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:37 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/15 18:50:06 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 18:02:55 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ t_image	*init_image(void *mlx)
 	if (!image)
 		return (NULL);
 	image->image = mlx_new_image(mlx, WINDOW_WIDTH, WINDOW_HEIGHT);
-	image->buffer = mlx_get_data_addr(image->image, &image->pixel_bits, &image->line_bytes, &image->endian);
+	image->buffer = mlx_get_data_addr(image->image, &image->pixel_bits, \
+		&image->line_bytes, &image->endian);
 	image->line = NULL;
 	return (image);
 }
@@ -100,6 +101,7 @@ t_line	*init_line(t_point start, t_point end, t_fdf *fdf)
 	line->end.y = end.y;
 	line->end.z = end.z;
 	line->end.color = end.color;
-	line->transform_z = max((fdf->map->max_z - fdf->map->min_z), max(fdf->map->max_x, fdf->map->max_y));
+	line->transform_z = max((fdf->map->max_z - fdf->map->min_z), \
+		max(fdf->map->max_x, fdf->map->max_y));
 	return (line);
 }

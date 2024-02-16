@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:55:29 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 16:25:26 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 15:32:32 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ void	render(t_fdf *fdf)
 		while (x < fdf->map->max_x)
 		{
 			if (x < fdf->map->max_x - 1)
-				render_line(fdf, fdf->map->coordinates[x][y], fdf->map->coordinates[x + 1][y]);
+				render_line(fdf, fdf->map->coordinates[x][y], \
+					fdf->map->coordinates[x + 1][y]);
 			if (y < fdf->map->max_y - 1)
-				render_line(fdf, fdf->map->coordinates[x][y], fdf->map->coordinates[x][y + 1]);
+				render_line(fdf, fdf->map->coordinates[x][y], \
+					fdf->map->coordinates[x][y + 1]);
 			x++;
 		}
 		y++;
@@ -46,7 +48,6 @@ void	render(t_fdf *fdf)
 static void	render_line(t_fdf *fdf, t_point start, t_point end)
 {
 	start.z *= fdf->cam->scale_z;
-	
 	end.z *= fdf->cam->scale_z;
 	apply_colors(fdf, &start);
 	apply_colors(fdf, &end);
@@ -75,13 +76,15 @@ static void	apply_colors(t_fdf *fdf, t_point *point)
 		if (point->z >= 0)
 		{
 			col = color_pallet_init(C_GREY, C_ORANGY);
-			point->color = get_color(col, absolute(point->z), absolute(fdf->map->max_z));
+			point->color = get_color(col, absolute(point->z), \
+				absolute(fdf->map->max_z));
 			free(col);
 		}
 		else
 		{
 			col = color_pallet_init(C_GREY, C_BLUEY);
-			point->color = get_color(col, absolute(point->z), absolute(fdf->map->max_z));
+			point->color = get_color(col, absolute(point->z), \
+				absolute(fdf->map->max_z));
 			free(col);
 		}
 	}

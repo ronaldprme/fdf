@@ -3,43 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <rprocopi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 15:47:46 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:47:48 by rprocopi         ###   ########.fr       */
+/*   Created: 2023/09/23 13:31:45 by rpr               #+#    #+#             */
+/*   Updated: 2023/10/28 10:43:06 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-*	DESCRIPTION
-*	Allocates (with malloc(3)) and returns a substring from the string ’s’.
-*	The substring begins at index ’start’ and is of maximum size ’len’.
-*	PARAMETERS
-*	#1. The string from which to create the substring.
-*	#2. The start index of the substring in the string ’s’.
-*	#3. The maximum length of the substring.
-*	RETURN VALUES
-*	The substring. NULL if the allocation fails.
-*/
-
 #include "libft.h"
-
+//Extrair uma substring de uma string.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sstr;
-	size_t	strlen;
+	size_t	ls;
+	char	*substr;
 
 	if (s == NULL)
 		return (NULL);
-	strlen = ft_strlen((char *)s);
-	if (start > strlen)
+	ls = ft_strlen(s);
+	if (!s)
 		return (ft_strdup(""));
-	if (strlen - start >= len)
-		sstr = (char *)malloc((len + 1) * sizeof(char));
-	else
-		sstr = (char *)malloc((strlen - start + 1) * sizeof(char));
-	if (sstr == NULL)
+	if (start >= ls)
+		return (ft_strdup(""));
+	ls = ft_strlen(s + start);
+	if (len > ls)
+		len = ls;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
 		return (NULL);
-	ft_strlcpy(sstr, (s + start), (len + 1));
-	return (sstr);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);
 }

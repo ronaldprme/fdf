@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:52 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:49:55 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:48:41 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@
 # define KEY_PLUS	61
 # define KEY_MINUS	45
 # define KEY_SPACE	32
+
+# define KEY_SUM2    69
+# define KEY_RES2    78
 
 # define KEY_Z		122
 # define KEY_X		120

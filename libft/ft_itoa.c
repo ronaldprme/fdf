@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:44:17 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:44:20 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:43:22 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 */
 
 #include "libft.h"
+
 int		ft_countsize(long int n);
 void	ft_convbase(long int n, char *number, long int i);
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:55:22 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:27:34 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 18:02:21 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ static void	fill_point(char *point, t_map *map, int coord_x, int coord_y);
 
 /*
 Faz a leitura do mapa, obtendo o a largura, a profundidade, e o valor de altura.
-A cor é obtida através da separação do valor apresentado separado por "," através da int info[1],
+A cor é obtida através da separação do valor apresentado separado por "," 
+através da int info[1],
 Os valores são carregados na estruc t_map e t_point.
 */
-
-
 
 t_map	*read_map(char *file_name)
 {
@@ -121,6 +120,7 @@ static void	get_points(char *file_name, t_map *map)
 			coord[0]++;
 		}
 		free(split);
+		free(line);
 		coord[1]++;
 	}
 	close(fd);
@@ -137,7 +137,8 @@ static void	fill_point(char *point, t_map *map, int coord_x, int coord_y)
 	{
 		info = ft_split(point, ',');
 		map->coordinates[coord_x][coord_y].z = (float)ft_atoi(info[0]);
-		map->coordinates[coord_x][coord_y].color = ft_atoi_base(info[1], HEXADECIMAL_L_BASE);
+		map->coordinates[coord_x][coord_y].color = \
+				ft_atoi_base(info[1], HEXADECIMAL_L_BASE);
 		i = 0;
 		while (info[i])
 			free(info[i++]);

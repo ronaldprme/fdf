@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/10 10:56:02 by rprocopi          #+#    #+#              #
-#    Updated: 2024/02/13 18:46:01 by rprocopi         ###   ########.fr        #
+#    Updated: 2024/02/16 20:58:41 by rprocopi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,8 @@ OBJ=$(notdir $(SRC:.c=.o))
 #OBJ= fdf.o
 
 #compilation
-CF 			= -g -Wall -Wextra -Werror
-CC 			= clang
+CF 			= -Wall -Wextra -Werror
+CC 			= cc
 MLX_CF 		= -lm -lbsd -lmlx -lXext -lX11
 CFI 		= -I$(INCLUDES)
 LEAKS 		= valgrind

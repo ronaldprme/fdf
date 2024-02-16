@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:42:53 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:42:55 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:42:59 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 */
 
 #include "libft.h"
+
 int	ft_checkerr(int sign);
 
 int	ft_atoi(const char *str)

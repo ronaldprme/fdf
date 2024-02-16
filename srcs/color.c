@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   color.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:53:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/15 16:28:35 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 15:45:13 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	get_color(t_color *color, int i_line, int line_size)
 	float	progress;
 
 	progress = (float) i_line / (float) line_size;
-
 	return (color_gradient(color, progress));
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:46:27 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:46:29 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 20:43:39 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 */
 
 #include "libft.h"
+
 void	ft_createsplit(char **result, char const *s, char c);
 size_t	ft_addpart(char **result, const char *prev, size_t size, char c);
 

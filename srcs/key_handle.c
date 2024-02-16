@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_handle.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 14:30:07 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/16 15:24:28 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static void	key_translate(int keycode, t_fdf *fdf);
 static void	key_scale(int keycode, t_fdf *fdf);
 static void	key_rotate(int keycode, t_fdf *fdf);
 static void	key_project(int keycode, t_fdf *fdf);
-//static void Key_color(int keycode, t_fdf *fdf);
 
 int	key_handle(int keycode, t_fdf *fdf)
 {
