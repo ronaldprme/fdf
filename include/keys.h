@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:52 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/16 20:48:41 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:46:13 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define NUMPAD_8	65431
 # define NUMPAD_9	65434
 
+
 # define NUMKEY_1	49
 # define NUMKEY_2	50
 # define NUMKEY_3	51
@@ -40,9 +41,14 @@
 
 # define KEY_PLUS	61
 # define KEY_MINUS	45
+# define KEY_MINUSPAD 65453
 # define KEY_SPACE	32
 
+# define KEY_SUM     30
 # define KEY_SUM2    69
+# define KEY_SUMPAD 65451
+
+# define KEY_RES     44
 # define KEY_RES2    78
 
 # define KEY_Z		122

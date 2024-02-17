@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:53:37 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/16 16:26:07 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:20:15 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 static void	close_coordinates(t_point **coordinates, int width);
 
+int	close_w(void *param)
+{
+	t_fdf	*fdf;
+
+	fdf = (t_fdf *)param;
+	close_all(fdf, 0);
+	exit(0);
+}
+
 void	close_all(t_fdf *fdf, int exit_code)
+
 {
 	close_coordinates(fdf->map->coordinates, fdf->map->max_x);
 	free(fdf->map);

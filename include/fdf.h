@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:49:47 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/17 13:17:49 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -254,5 +254,6 @@ void	translate(t_line *line, int move_x, int move_y);
 ** Key handle functions
 */
 int		key_handle(int keycode, t_fdf *fdf);
+int		close_w(void *param);
 
 #endif
