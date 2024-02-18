@@ -6,7 +6,7 @@
 #    By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/10 10:56:02 by rprocopi          #+#    #+#              #
-#    Updated: 2024/02/17 13:18:24 by rprocopi         ###   ########.fr        #
+#    Updated: 2024/02/18 16:25:58 by rprocopi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC 		= $(SRCDIR)main.c \
 				$(SRCDIR)init_utils.c \
 				$(SRCDIR)init.c \
 				$(SRCDIR)key_handle.c \
+				$(SRCDIR)key_handle2.c \
 				$(SRCDIR)menu.c \
 				$(SRCDIR)project.c \
 				$(SRCDIR)read.c \

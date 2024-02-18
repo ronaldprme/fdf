@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 10:09:45 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:27:30 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,16 @@ int	key_handle(int keycode, t_fdf *fdf)
 		key_translate(keycode, fdf);
 	else if (keycode == KEY_PLUS || keycode == KEY_MINUS || keycode == KEY_Z \
 		|| keycode == KEY_X || keycode == KEY_SUM || keycode == KEY_SUM2 || \
-			keycode == KEY_RES || keycode == KEY_RES2)
+			keycode == KEY_RES || keycode == KEY_RES2 || keycode == KEY_SPD \
+			|| keycode == KEY_MPD) 
 		key_scale(keycode, fdf);
 	else if (keycode == KEY_A || keycode == KEY_S || keycode == KEY_D \
 		|| keycode == KEY_Q || keycode == KEY_W || keycode == KEY_E)
 		key_rotate(keycode, fdf);
 	else if (keycode == KEY_P || keycode == KEY_I || keycode == KEY_O)
 		key_project(keycode, fdf);
-	else if (keycode == KEY_SPACE)
-	{
-		if (fdf->cam->color_pallet == FALSE)
-			fdf->cam->color_pallet = TRUE;
-		else 
-			fdf->cam->color_pallet = FALSE;
-	}
-	else if (keycode == KEY_R)
-		reset(fdf);
+	else
+		key_handle2(keycode, fdf);
 	render(fdf);
 	return (0);
 }
@@ -60,9 +54,9 @@ static void	key_translate(int keycode, t_fdf *fdf)
 
 static void	key_scale(int keycode, t_fdf *fdf)
 {
-	if (keycode == KEY_PLUS || keycode == KEY_SUMPAD)
+	if (keycode == KEY_PLUS || keycode == KEY_SPD)
 		fdf->cam->scale_factor += 1;
-	else if (keycode == KEY_MINUS || keycode == KEY_MINUSPAD || \
+	else if (keycode == KEY_MINUS || keycode == KEY_MPD || \
 	keycode == KEY_RES2)
 		fdf->cam->scale_factor -= 1;
 	else if (keycode == KEY_Z && fdf->cam->scale_z > -1)

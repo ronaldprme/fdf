@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   key_handle2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/10 10:54:55 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:09:59 by rprocopi         ###   ########.fr       */
+/*   Created: 2024/02/10 10:54:45 by rprocopi          #+#    #+#             */
+/*   Updated: 2024/02/18 16:25:48 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fdf.h"
 
-static int	expose_handle(t_fdf *fdf);
-
-int	main(int ac, char **av)
+int	key_handle2(int keycode, t_fdf *fdf)
 {
-	char	*file_name;
-	t_fdf	*fdf;
-
-	if (ac != 2)
-		error(1);
-	file_name = av[1];
-	fdf = init_fdf(file_name);
-	render(fdf);
-	mlx_key_hook(fdf->win, &key_handle, fdf);
-	mlx_hook(fdf->win, 17, 0, close_w, &fdf);
-	mlx_expose_hook(fdf->win, &expose_handle, fdf);
-	mlx_loop(fdf->mlx);
-}
-
-static int	expose_handle(t_fdf *fdf)
-{
-	render(fdf);
+	if (keycode == KEY_SPACE)
+	{
+		if (fdf->cam->color_pallet == FALSE)
+			fdf->cam->color_pallet = TRUE;
+		else 
+			fdf->cam->color_pallet = FALSE;
+	}
+	else if (keycode == KEY_R)
+		reset(fdf);
 	return (0);
 }

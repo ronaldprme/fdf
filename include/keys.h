@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:52 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 10:14:53 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:59:57 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@
 
 # define KEY_PLUS	61
 # define KEY_MINUS	45
-# define KEY_MINUSPAD 65453
+# define KEY_MPD 	65453
 # define KEY_SPACE	32
 
 # define KEY_SUM     30
 # define KEY_SUM2    69
-# define KEY_SUMPAD 65451
+# define KEY_SPD 	65451
 
 # define KEY_RES     44
 # define KEY_RES2    78

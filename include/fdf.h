@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 13:00:21 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 16:24:13 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,6 +261,6 @@ void	translate(t_line *line, int move_x, int move_y);
 ** Key handle functions
 */
 int		key_handle(int keycode, t_fdf *fdf);
+int		key_handle2(int keycode, t_fdf *fdf);
 int		close_w(void *param);
-
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   project.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:55:16 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/13 19:59:11 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:16:48 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
