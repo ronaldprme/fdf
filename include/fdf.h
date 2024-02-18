@@ -6,10 +6,9 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/17 13:17:49 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 10:33:36 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FDF_H
 # define FDF_H
@@ -136,7 +135,6 @@ typedef struct s_cam
 */
 typedef struct s_fdf
 {
-
 	void	*mlx;
 	int		win_x;
 	int		win_y;
@@ -162,6 +160,8 @@ typedef struct s_fdf
 # define LINE_DEFAULT		C_WHITE
 # define BACKGROUND_DEFAULT	C_GREY
 # define C_TEXT				C_WHITE
+# define C_VAR				C_YELLOW
+# define C_TITLE			C_ORANGY
 
 /*
 ** Conversion bases & useful angles in rad
@@ -171,6 +171,9 @@ typedef struct s_fdf
 # define ANG_30				0.52359877
 # define ANG_45				0.78539816
 
+// #ifndef M_PI
+// # define M_PI 				3.14159
+// #endif
 /*
 ** Enumerator for projection names and boolean
 */
@@ -236,6 +239,7 @@ void	bresenham(t_fdf *fdf, t_point start, t_point end);
 void	pixel_to_image(t_image *image, float x, float y, int color);
 void	clear_image(t_image *image, int image_size);
 void	print_menu(t_fdf *fdf);
+void	print_menu2(t_fdf *fdf, int y);
 int		get_color(t_color *color, int i_line, int line_size);
 
 /*

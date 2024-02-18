@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/17 13:43:44 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 10:09:45 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ static void	key_scale(int keycode, t_fdf *fdf)
 {
 	if (keycode == KEY_PLUS || keycode == KEY_SUMPAD)
 		fdf->cam->scale_factor += 1;
-		
-	else if (keycode == KEY_MINUS || keycode == KEY_MINUSPAD || keycode == KEY_RES2)
+	else if (keycode == KEY_MINUS || keycode == KEY_MINUSPAD || \
+	keycode == KEY_RES2)
 		fdf->cam->scale_factor -= 1;
 	else if (keycode == KEY_Z && fdf->cam->scale_z > -1)
 		fdf->cam->scale_z -= 0.1;

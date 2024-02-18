@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:52 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/17 13:46:13 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 10:14:53 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 # define NUMPAD_7	65429
 # define NUMPAD_8	65431
 # define NUMPAD_9	65434
-
 
 # define NUMKEY_1	49
 # define NUMKEY_2	50

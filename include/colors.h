@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:32 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/14 15:49:34 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 10:13:11 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef COLORS_H
 # define COLORS_H
