@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:27 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/12 13:50:52 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 13:27:22 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ float	scale_to_fit(t_map *map)
 	scale_factor = min(scale_x, scale_y);
 	if (scale_factor < 4)
 		return (2);
-	return (scale_factor / 2);
+	return (scale_factor / 4);
 }
 
 void	reset(t_fdf *fdf)

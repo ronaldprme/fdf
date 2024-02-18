@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rprocopi <rprocopi@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:55:52 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/12 13:51:59 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 12:24:42 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

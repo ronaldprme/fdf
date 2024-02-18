@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 15:49:45 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 10:33:36 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/18 13:00:21 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <string.h>
 
 /*
 ** Allowed libraries: math and minilibx, witch is appended in the project's 
@@ -238,6 +239,8 @@ void	render(t_fdf *fdf);
 void	bresenham(t_fdf *fdf, t_point start, t_point end);
 void	pixel_to_image(t_image *image, float x, float y, int color);
 void	clear_image(t_image *image, int image_size);
+void	print_str(t_fdf *fdf, int x, int y, char *str);
+void	print_nbr(t_fdf *fdf, int x, int y, int nbr);
 void	print_menu(t_fdf *fdf);
 void	print_menu2(t_fdf *fdf, int y);
 int		get_color(t_color *color, int i_line, int line_size);
