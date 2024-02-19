@@ -6,7 +6,7 @@
 #    By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/10 10:56:02 by rprocopi          #+#    #+#              #
-#    Updated: 2024/02/18 16:25:58 by rprocopi         ###   ########.fr        #
+#    Updated: 2024/02/19 10:32:48 by rprocopi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ OBJ=$(notdir $(SRC:.c=.o))
 #OBJ= fdf.o
 
 #compilation
-CF 			= -Wall -Wextra -Werror
+CF 			= -Wall -Wextra -Werror -g
 CC 			= cc
 MLX_CF 		= -lm -lbsd -lmlx -lXext -lX11
 CFI 		= -I$(INCLUDES)

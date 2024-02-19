@@ -6,7 +6,7 @@
 /*   By: rprocopi <mailto:rprocopi@student.42lis    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:54:55 by rprocopi          #+#    #+#             */
-/*   Updated: 2024/02/18 16:09:59 by rprocopi         ###   ########.fr       */
+/*   Updated: 2024/02/19 11:34:46 by rprocopi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	main(int ac, char **av)
 	file_name = av[1];
 	fdf = init_fdf(file_name);
 	render(fdf);
+	mlx_hook(fdf->win, 17, 0, close_w, fdf);
 	mlx_key_hook(fdf->win, &key_handle, fdf);
-	mlx_hook(fdf->win, 17, 0, close_w, &fdf);
 	mlx_expose_hook(fdf->win, &expose_handle, fdf);
 	mlx_loop(fdf->mlx);
 }
